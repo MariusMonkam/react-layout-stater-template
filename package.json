@@ -1,0 +1,24 @@
+{
+  "name": "react-layout-stater-template",
+  "version": "1.0.0",
+  "description": "React Layout Stater Template: A comprehensive template package for React project, providing ready-to-use header, footer, sidebar, and navbar components for easy and efficient website layout creation",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "react",
+    "template",
+    "components",
+    "layout",
+    "stater",
+    "boilerplate",
+    "frontend",
+    "javascript",
+    "open",
+    "source",
+    "ui"
+  ],
+  "author": "Marius Monkam",
+  "license": "MIT"
+}
