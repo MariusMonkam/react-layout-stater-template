@@ -3,12 +3,6 @@ import subprocess
 from jinja2 import Template
 import warnings
 
-
-
-import os
-
-import os
-
 # Prompt the user to enter the project name and path
 project_name = input("Enter the name of the React project: ")
 project_path = input("Enter the desired path for the project (leave blank for the current directory): ")
