@@ -5,14 +5,35 @@ import warnings
 
 
 
-# Prompt the user to enter the name of the React project
-project_name = input("Enter the name of the React project: ")
+import os
 
-# Create a new directory for the project
-os.makedirs(project_name)
+import os
+
+# Prompt the user to enter the project name and path
+project_name = input("Enter the name of the React project: ")
+project_path = input("Enter the desired path for the project (leave blank for the current directory): ")
+
+# If no project path is provided, use the current directory as the default
+if not project_path:
+    project_path = os.getcwd()
+
+# Check if the generator is located within the 'node_modules' directory
+if 'node_modules' in os.getcwd().split(os.sep):
+    # Move up one level to the parent directory
+    project_path = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
+
+# Create the full path to the project directory
+project_dir = os.path.join(project_path, project_name)
+
+# Create the project directory if it doesn't exist
+if not os.path.exists(project_dir):
+    os.makedirs(project_dir)
 
 # Change the current working directory to the project directory
-os.chdir(project_name)
+os.chdir(project_dir)
+
+
+
 
 # Run the create-react-app command to create a new React project
 subprocess.call(['npx', 'create-react-app', '.'], shell=True)
