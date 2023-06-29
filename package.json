@@ -4,6 +4,7 @@
   "description": "React Layout Stater Template: A comprehensive template package for React project, providing ready-to-use header, footer, sidebar, and navbar components for easy and efficient website layout creation",
   "main": "index.js",
   "scripts": {
+    "template": "node index.js",
     "test": "test"
   },
   "keywords": [
